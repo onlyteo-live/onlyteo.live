@@ -41,20 +41,17 @@ jobs:
           node-version: 22
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: NPM Install
         run: npm ci
       - name: NPM Build
-        run: npm run build && pwd && ls -la && tree
+        run: npm run build && pwd && ls -la && tree -d -L 2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
   # Deployment job
   deploy:

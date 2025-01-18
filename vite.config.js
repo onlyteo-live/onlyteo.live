@@ -4,6 +4,10 @@ import {dirname, resolve} from "node:path"
 
 export default defineConfig({
     root: resolve(dirname(fileURLToPath(import.meta.url)), "src"),
+    build: {
+        outDir: resolve(dirname(fileURLToPath(import.meta.url)), "dist"),
+        emptyOutDir: true
+    },
     server: {
         host: "0.0.0.0",
         port: 3000,
@@ -36,14 +40,3 @@ export default defineConfig({
         }
     }
 })
-
-const SCSS_Logger = {
-    warn(message, options) {
-        // Mute "Mixed Declarations" warning
-        if (options.deprecation && message.includes("mixed-decls")) {
-            return
-        }
-        // List all other warnings
-        console.warn(`▲ [WARNING]: ${message}`)
-    }
-}
