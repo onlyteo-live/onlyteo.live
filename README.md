@@ -1,2 +1,1 @@
-# onlyteo.live
-onlyteo.live Webpage
+# onlyteo.live Webpage
