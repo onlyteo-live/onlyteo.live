@@ -1,9 +1,11 @@
-import {defineConfig} from "vite"
 import {fileURLToPath, URL} from "node:url"
 import {dirname, resolve} from "node:path"
+import {defineConfig} from "vite"
+import inject from '@rollup/plugin-inject';
 
 export default defineConfig({
     root: resolve(dirname(fileURLToPath(import.meta.url)), "src"),
+    publicDir: resolve(dirname(fileURLToPath(import.meta.url)), "public"),
     build: {
         outDir: resolve(dirname(fileURLToPath(import.meta.url)), "dist"),
         emptyOutDir: true
@@ -13,7 +15,11 @@ export default defineConfig({
         port: 3000,
         hot: true
     },
-    plugins: [],
+    plugins: [
+        inject({
+            jQuery: 'jquery',
+        })
+    ],
     define: {
         "process.env": {}
     },
@@ -35,8 +41,16 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                quietDeps: true
+                silenceDeprecations: [
+                    "import",
+                    "mixed-decls",
+                    "color-functions",
+                    "global-builtin"
+                ]
             }
         }
+    },
+    optimizeDeps: {
+        include: ['jquery']
     }
 })
