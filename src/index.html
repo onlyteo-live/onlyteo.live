@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <title>onlyteo</title>
     <meta charset="utf-8">
@@ -7,12 +7,59 @@
     <meta name="description" content="onlyteo public profile">
     <meta name="keywords" content="profile,personal,developer">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon.png" sizes="180x180">
 </head>
 <body>
-<div class="container py-4 px-3 mx-auto">
-    <h1>onlyteo</h1>
-    <p>Website coming soon!</p>
-</div>
+<main class="container mx-auto">
+    <header>
+        <nav id="name" class="navbar border-bottom m-0 pt-4 pb-3">
+            <h1 class="m-0">onlyteo</h1>
+        </nav>
+        <nav id="socials" class="navbar navbar-expand-lg justify-content-end m-0 py-2">
+            <ul class="navbar-nav text-decoration-none fs-5">
+                <li class="nav-item me-3">
+                    <a title="Bluesky" href="https://bsky.app/profile/onlyteo.live" target="_blank">
+                        <i class="fa-brands fa-bluesky"></i>
+                    </a>
+                </li>
+                <li class="nav-item me-3">
+                    <a title="Mastodon" href="https://hachyderm.io/@onlyteo" target="_blank">
+                        <i class="fa-brands fa-mastodon"></i>
+                    </a>
+                </li>
+                <li class="nav-item me-3">
+                    <a title="GitHub" href="https://github.com/onlyteo" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a title="Webpage" href="https://onlyteo.com" target="_blank">
+                        <i class="fa-solid fa-globe"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <section id="profile">
+            <div id="avatar" class="ps-3 pb-4">
+                <img class="rounded-circle d-block" src="/images/onlyteo-100x100.png" alt="avatar"/>
+            </div>
+            <div id="bio">
+                <p>Hi and welcome to my public profile page!</p>
+                <p>You can call me Teo. I'm a scruffy tech nerd with a passion for software development, technology,
+                    science and general knowledge.</p>
+                <p>In my professional live I'm a developer and technical architect with more than <span id="age"></span>
+                    years of experience developing enterprise software in both private and public sector.</p>
+                <p></p>
+            </div>
+        </section>
+    </article>
+    <footer></footer>
+</main>
 <script type="module" src="./js/main.js"></script>
 </body>
 </html>
