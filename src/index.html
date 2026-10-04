@@ -13,52 +13,51 @@
     <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon.png" sizes="180x180">
 </head>
 <body>
-<main class="container mx-auto">
-    <header>
-        <nav id="name" class="navbar border-bottom m-0 pt-4 pb-3">
-            <h1 class="m-0">onlyteo</h1>
-        </nav>
-        <nav id="socials" class="navbar navbar-expand-lg justify-content-end m-0 py-2">
-            <ul class="navbar-nav text-decoration-none fs-5">
-                <li class="nav-item me-3">
-                    <a title="Bluesky" href="https://bsky.app/profile/onlyteo.live" target="_blank">
-                        <i class="fa-brands fa-bluesky"></i>
-                    </a>
-                </li>
-                <li class="nav-item me-3">
-                    <a title="Mastodon" href="https://hachyderm.io/@onlyteo" target="_blank">
-                        <i class="fa-brands fa-mastodon"></i>
-                    </a>
-                </li>
-                <li class="nav-item me-3">
-                    <a title="GitHub" href="https://github.com/onlyteo" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a title="Webpage" href="https://onlyteo.com" target="_blank">
-                        <i class="fa-solid fa-globe"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <article>
-        <section id="profile">
-            <div id="avatar" class="ps-3 pb-4">
-                <img class="rounded-circle d-block" src="/images/onlyteo-100x100.png" alt="avatar"/>
-            </div>
-            <div id="bio">
-                <p>Hi and welcome to my public profile page!</p>
-                <p>You can call me Teo. I'm a scruffy tech nerd with a passion for software development, technology,
-                    science and general knowledge.</p>
-                <p>In my professional life I'm a developer and technical architect with more than <span id="age"></span>
-                    years of experience developing enterprise software in both private and public sector.</p>
-                <p></p>
-            </div>
-        </section>
-    </article>
-    <footer></footer>
+<main class="container">
+    <div class="term">
+        <div class="term-bar">
+            <span class="term-title">teo@onlyteo:~</span>
+            <span class="term-ctl" aria-hidden="true">
+                <i class="fa-solid fa-minus"></i>
+                <i class="fa-regular fa-square"></i>
+                <i class="fa-solid fa-xmark close"></i>
+            </span>
+        </div>
+        <div class="term-body">
+            <header>
+                <h1 class="brand">onlyteo<span class="cursor">_</span></h1>
+                <p class="tagline">// developer &middot; technical architect &middot; tech nerd</p>
+            </header>
+            <article>
+                <section id="profile">
+                    <p class="cmd"><span class="ps"><span class="ps-user">teo@onlyteo</span> <span class="ps-dir">~</span> <span class="ps-sym">&#10095;</span></span> cat about.md</p>
+                    <div id="bio" class="out">
+                        <img class="avatar" src="/images/onlyteo-100x100.png" alt="avatar" width="100" height="100"/>
+                        <p>Hi and welcome to my public profile page!</p>
+                        <p>You can call me Teo. I'm a scruffy tech nerd with a passion for software development,
+                            technology, science and general knowledge.</p>
+                        <p>In my professional life I'm a developer and technical architect with more than
+                            <span id="age" class="hl"></span> years of experience developing enterprise software in
+                            both private and public sector.</p>
+                    </div>
+                </section>
+                <section id="socials">
+                    <p class="cmd"><span class="ps"><span class="ps-user">teo@onlyteo</span> <span class="ps-dir">~</span> <span class="ps-sym">&#10095;</span></span> ls ./links</p>
+                    <ul class="out links">
+                        <li><a title="Bluesky" href="https://bsky.app/profile/onlyteo.live" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-bluesky"></i><span>bluesky</span></a></li>
+                        <li><a title="Mastodon" href="https://hachyderm.io/@onlyteo" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-mastodon"></i><span>mastodon</span></a></li>
+                        <li><a title="GitHub" href="https://github.com/onlyteo" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-github"></i><span>github</span></a></li>
+                        <li><a title="Webpage" href="https://onlyteo.com" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-globe"></i><span>onlyteo.com</span></a></li>
+                    </ul>
+                </section>
+                <p class="cmd"><span class="ps"><span class="ps-user">teo@onlyteo</span> <span class="ps-dir">~</span> <span class="ps-sym">&#10095;</span></span> <span class="cursor">&#9608;</span></p>
+            </article>
+        </div>
+    </div>
 </main>
 <script type="module" src="./js/main.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXGM8LMRKD"></script>

@@ -19,13 +19,13 @@
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.8",
     "jquery": "^3.7.1"
   },
   "devDependencies": {
     "@rollup/plugin-inject": "^5.0.5",
-    "eslint": "^9.18.0",
-    "sass": "^1.83.4",
-    "vite": "^6.0.7"
+    "eslint": "^9.39.5",
+    "sass": "^1.105.1",
+    "vite": "^6.4.3"
   }
 }
