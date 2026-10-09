@@ -22,8 +22,8 @@ jobs:
         run: npm ci && npm run build
 
       - name: Deploy to Codeberg Pages
-        uses: actions/git-pages@v2
+        uses: https://codeberg.org/git-pages/action@v2
         with:
-          site: https://${{ forgejo.event.repository.owner.username }}.codeberg.page/
-          token: ${{ forgejo.token }}
+          site: https://${{ forge.repository_owner }}.codeberg.page/
+          token: ${{ forge.token }}
           source: dist/
