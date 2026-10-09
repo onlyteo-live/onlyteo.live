@@ -1,0 +1,29 @@
+name: Build and Deploy to Codeberg Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: codeberg-tiny
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - name: Install and Build
+        run: npm ci && npm run build
+
+      - name: Deploy to Codeberg Pages
+        uses: actions/git-pages@v2
+        with:
+          site: https://${{ forgejo.event.repository.owner.username }}.codeberg.page/
+          token: ${{ forgejo.token }}
+          source: dist/
