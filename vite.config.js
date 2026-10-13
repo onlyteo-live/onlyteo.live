@@ -1,7 +1,6 @@
 import {fileURLToPath, URL} from "node:url"
 import {dirname, resolve} from "node:path"
 import {defineConfig} from "vite"
-import inject from '@rollup/plugin-inject';
 
 export default defineConfig({
     root: resolve(dirname(fileURLToPath(import.meta.url)), "src"),
@@ -15,11 +14,6 @@ export default defineConfig({
         port: 3000,
         hot: true
     },
-    plugins: [
-        inject({
-            jQuery: 'jquery',
-        })
-    ],
     define: {
         "process.env": {}
     },
