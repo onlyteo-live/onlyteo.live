@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - pages
+  schedule:
+    - cron: "0 0 * * 1"
 
 jobs:
   build_and_deploy:
@@ -18,12 +20,14 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 26
+
       - name: Install and Build
         run: npm ci && npm run build
 
       - name: Deploy to Codeberg Pages
         uses: https://codeberg.org/git-pages/action@v2
         with:
-          site: https://${{ forge.repository_owner }}.codeberg.page/
+          site: https://onlyteo.live/
+          server: codeberg.page
           token: ${{ forge.token }}
           source: dist/
